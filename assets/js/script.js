@@ -61,8 +61,9 @@ $(function () {
     localStorage.setItem("workDayHour", JSON.stringify(workDayHour));
   });
 
-  // Gets saved description from local storage
+  // Gets saved description from local storage and persists it on the page
   var savedWorkDescription = JSON.parse(localStorage.getItem("workDayHour")) || workDayHour.val();
+  var workDayHour = savedWorkDescription;
 
   // When page refreshes or reloads, adds saved description to time blocks from local storage
   for (var i = 0; i < savedWorkDescription.length; i++) {
@@ -70,6 +71,5 @@ $(function () {
     var timeBlock = $(`#${timeBlockId}`).closest(".time-block");
     var description = timeBlock.find(".description");
     description.val(savedWorkDescription[i].description);
-    console.log()
   }
 });
