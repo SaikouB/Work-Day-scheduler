@@ -1,4 +1,14 @@
 $(function () {
+
+  // Updates date and time live on webpage using 'MMM DD, YYYY hh:mm:ss A' dayjs format.
+  function updateTime() {
+    var now = dayjs();
+    var formattedDateTime = now.format('MMM DD, YYYY hh:mm:ss A');
+    $("#currentDayTime").text(formattedDateTime);
+  }
+  updateTime(); // Calls function to update time
+  setInterval(updateTime, 1000); // 1 second time interval
+
   // Work day hour array to inlcude time, description, index hour and hour of day in 24hr format
   var workDayHour = [
     { time: "9 AM", description: "", index: 'hour0', hour: 9 },
@@ -62,14 +72,4 @@ $(function () {
     description.val(savedWorkDescription[i].description);
     console.log()
   }
-
-  // Updates date and time live on webpage using 'MMM DD, YYYY hh:mm:ss A' dayjs format.
-  function updateTime() {
-    var now = dayjs();
-    var formattedDateTime = now.format('MMM DD, YYYY hh:mm:ss A');
-    $("#currentDayTime").text(formattedDateTime);
-  }
-  
-  updateTime(); // Calls function to update time
-  setInterval(updateTime, 1000); // 1 second time interval
 });
