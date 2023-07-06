@@ -15,9 +15,12 @@ This webpage features dynamically added html. At the header of this webpage, the
 
 ## Webpage Link (URL)
 
+https://saikoub.github.io/Work-Day-scheduler/
 
 ## GitHub Repository Link (URL)
 
 https://github.com/SaikouB/Work-Day-scheduler
 
 ## Webpage Screenshot
+
+<img width="1440" alt="Screen Shot 2023-07-06 at 3 21 54 PM" src="https://github.com/SaikouB/Work-Day-scheduler/assets/132960605/1e95be16-258a-4c4a-a7aa-78a5c120342c">
